@@ -1,6 +1,6 @@
 function Drawer() {
     return (
-        <div className="overlay">
+        <div style={{display: "none"}} className="overlay">
             <div className="drawer">
                 <h2 className="d-flex justify-between mb-40">Shopping cart <img className="cu-p" src="/img/remove.svg"
                                                                                 alt="remove" height={32} width={32}/>
