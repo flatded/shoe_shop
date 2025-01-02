@@ -78,6 +78,7 @@ header {
 .drawer {
   display: flex;
   flex-direction: column;
+  overflow: scroll;
   position: absolute;
   width: 420px;
   height: 100%;
@@ -92,6 +93,7 @@ header {
     border-radius: 20px;
     overflow: hidden;
     padding: 20px;
+    margin-bottom: 40px;
 
 
     .cartItemsImg {
