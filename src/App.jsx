@@ -1,10 +1,18 @@
-import Card from './components/Card'
-import Header from './components/Header'
-import Drawer from "./components/Drawer";
+import Card from './components/Card/Card.jsx'
+import Header from './components/Header/Header.jsx'
+import Drawer from './components/Drawer/Drawer.jsx'
+
+const arr = [
+    { title: "Sneakers Norm", price: 499.99, imageUrl: "/img/sneakers/1.jpg"},
+    { title: "Sneakers Rom", price: 4399.99, imageUrl: "/img/sneakers/2.jpg"},
+    { title: "Sneakers Speed", price: 4199.99, imageUrl: "/img/sneakers/3.jpg"},
+    { title: "Sneakers Mor", price: 4299.99, imageUrl: "/img/sneakers/4.jpg"},
+]
+
 function App() {
     return <div className="wrapper clear">
-        <Drawer/>
         <Header/>
+        <Drawer/>
 
         <div className="content p-40">
             <div className="d-flex align-center mb-40 justify-between">
@@ -16,9 +24,16 @@ function App() {
             </div>
 
             <div className="d-flex">
-                <Card/>
-                <Card/>
-                <Card/>
+                {
+                    arr.map((obj)=> (
+                    <Card
+                        key={obj.id}
+                        title={obj.title}
+                        price={obj.price}
+                        imageUrl={obj.imageUrl}
+                    />
+                ))
+                }
             </div>
         </div>
     </div>

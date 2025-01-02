@@ -32,7 +32,8 @@ function Drawer() {
                     <button className="greenButton">Make an order <img src="/img/arrow.svg" alt="arrow"/></button>
                 </div>
             </div>
-            </div>
-            )
-            }
-            export default Drawer;
+        </div>
+    )
+}
+
+export default Drawer;
