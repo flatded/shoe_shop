@@ -1,9 +1,10 @@
-function Drawer() {
+/* eslint-disable react/prop-types */
+function Drawer(props) {
     return (
-        <div style={{display: "none"}} className="overlay">
+        <div className="overlay">
             <div className="drawer">
-                <h2 className="d-flex justify-between mb-40">Shopping cart <img className="cu-p" src="/img/remove.svg"
-                                                                                alt="remove" height={32} width={32}/>
+                <h2 className="d-flex justify-between mb-40">Shopping cart <img onClick={props.onClose} className="cu-p" src="/img/close.svg"
+                                                                                alt="close" height={32} width={32}/>
                 </h2>
                 <div className="items">
                     <div className="cartItems d-flex align-center mb-20">

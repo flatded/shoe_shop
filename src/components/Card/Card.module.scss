@@ -7,6 +7,13 @@
   margin-right: 30px;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 
+  .plus {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+
+  }
+
   &:hover {
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
@@ -14,6 +21,10 @@
 
   .favorite {
     position: absolute;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     img {
       opacity: 10%;

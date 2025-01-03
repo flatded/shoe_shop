@@ -1,10 +1,16 @@
 /* eslint-disable react/prop-types */
+import React from "react"
 import styles from "./Card.module.scss";
 function Card(props) {
+    const [isAdded, setIsAdded] = React.useState(false)
+
+    const onClickAddItem = () => {
+        setIsAdded(!isAdded)
+    }
 
     return (
         <div className={styles.card}>
-            <div className={styles.favorite}>
+            <div className={styles.favorite} onClick={props.onAddFavorite}>
                 <img src="/img/heart.svg" alt="heart" height={32} width={32}/>
             </div>
             <img width={112} height={112} src={props.imageUrl} alt="sneakers" className="ml-20"/>
@@ -14,9 +20,7 @@ function Card(props) {
                     <span>Price:</span>
                     <b>${props.price}</b>
                 </div>
-                <button className="button">
-                    <img width={11} height={11} src="/img/plus.svg" alt="plus"/>
-                </button>
+                <img className={styles.plus} onClick={onClickAddItem} src={isAdded ? "/img/check.svg" : "/img/plus.svg"} alt="plus"/>
             </div>
         </div>
     )
